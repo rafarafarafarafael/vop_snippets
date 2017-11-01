@@ -1,0 +1,55 @@
+{
+    "connections": {
+        "snippet1": [
+            {
+                "add1": [
+                    0,
+                    0
+                ]
+            }
+        ],
+        "const1": [],
+        "add1": [
+            {
+                "const1": [
+                    0,
+                    0
+                ]
+            },
+            {
+                "const2": [
+                    1,
+                    0
+                ]
+            }
+        ],
+        "const2": []
+    },
+    "nodes": {
+        "snippet1": {
+            "parms": {
+                "code": "float myScript = script;",
+                "namenum": 1,
+                "name1": "script"
+            },
+            "type": "snippet"
+        },
+        "const1": {
+            "parms": {
+                "floatdef": 1.0
+            },
+            "type": "constant"
+        },
+        "add1": {
+            "parms": {},
+            "type": "add"
+        },
+        "const2": {
+            "parms": {},
+            "type": "constant"
+        }
+    },
+    "host": {
+        "host": "com"
+    }
+}

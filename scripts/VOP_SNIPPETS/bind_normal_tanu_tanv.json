@@ -1,0 +1,36 @@
+{
+    "connections": {
+        "bind2": [],
+        "bind3": [],
+        "bind1": []
+    },
+    "nodes": {
+        "bind2": {
+            "parms": {
+                "parmname": "tangentu",
+                "exportcontext": "cvex",
+                "parmtype": 7
+            },
+            "type": "bind"
+        },
+        "bind3": {
+            "parms": {
+                "parmname": "tangentv",
+                "exportcontext": "cvex",
+                "parmtype": 7
+            },
+            "type": "bind"
+        },
+        "bind1": {
+            "parms": {
+                "parmname": "normal",
+                "exportcontext": "cvex",
+                "parmtype": 7
+            },
+            "type": "bind"
+        }
+    },
+        "host": {
+        "host": "com"
+    }
+}

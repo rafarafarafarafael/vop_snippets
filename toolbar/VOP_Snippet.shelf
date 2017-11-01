@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shelfDocument>
+  <!-- This file contains definitions of shelves, toolbars, and tools.
+ It should not be hand-edited when it is being used by the application.
+ Note, that two definitions of the same element are not allowed in
+ a single file. -->
+
+  <toolshelf name="vop_snippets label="VOP Snippets">
+    <memberTool name="write_VOP_snippet"/>
+    <memberTool name="read_VOP_snippet"/>
+  </toolshelf>
+
+  <tool name="write_VOP_snippet" label="Write VOP Snippet" icon="PLASMA_App">
+    <helpText><![CDATA[Writes the selected VOPs as a preset in disk for later retrieval.]]></helpText>
+    <script scriptType="python"><![CDATA[import os, os.path as ospath, sys
+
+script_path = os.environ['HOUDINI_USER_PREF_DIR'].split("/")
+script_path.append('scripts')
+script_path = ospath.sep.join(script_path)
+if script_path not in sys.path:
+    sys.path.append(script_path)
+try:
+    import vop_snippet as vs
+    reload(vs)
+except ImportError:
+    hou.ui.setStatusMessage(message= "script path not available, trying to fix")
+
+node_list  = hou.selectedNodes()
+vs.writeList(hou, script_path, node_list)]]></script>
+  </tool>
+
+  <tool name="read_VOP_snippet" label="Read VOP Snippet" icon="PLASMA_App">
+    <helpText><![CDATA[Reads a VOP preset file and re-creates the nodes and connections within current VOP network]]></helpText>
+    <script scriptType="python"><![CDATA[import os, os.path as ospath, sys
+
+script_path = os.environ['HOUDINI_USER_PREF_DIR'].split("/")
+script_path.append('scripts')
+script_path = ospath.sep.join(script_path)
+if script_path not in sys.path:
+    sys.path.append(script_path)
+try:
+    import vop_snippet as vs
+    reload(vs)
+except ImportError:
+    hou.ui.setStatusMessage(message= "script path not available, trying to fix")
+    
+node_list  = hou.selectedNodes()
+vs.readSnippet(hou, script_path)]]></script>
+  </tool>
+</shelfDocument>

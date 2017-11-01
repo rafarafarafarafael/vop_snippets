@@ -1,0 +1,89 @@
+{
+    "connections": {
+        "maxpoints": [],
+        "bind1": [
+            {
+                "pcfilter1": [
+                    0,
+                    0
+                ]
+            }
+        ],
+        "radius": [],
+        "pcopen1": [
+            {
+                "geometryvopglobal1": [
+                    0,
+                    18
+                ]
+            },
+            {
+                "geometryvopglobal1": [
+                    2,
+                    0
+                ]
+            },
+            {
+                "radius": [
+                    5,
+                    0
+                ]
+            },
+            {
+                "maxpoints": [
+                    6,
+                    0
+                ]
+            }
+        ],
+        "pcfilter1": [
+            {
+                "pcopen1": [
+                    0,
+                    0
+                ]
+            }
+        ]
+    },
+    "nodes": {
+        "maxpoints": {
+            "parms": {
+                "parmlabel": "Number of points",
+                "exportcontext": "cvex",
+                "parmname": "maxpoints",
+                "intdef": 10,
+                "parmtype": 1
+            },
+            "type": "parameter"
+        },
+        "bind1": {
+            "parms": {
+                "useasparmdefiner": 1,
+                "overridetype": 1,
+                "exportcontext": "cvex",
+                "exportparm": 2
+            },
+            "type": "bind"
+        },
+        "radius": {
+            "parms": {
+                "floatdef": 0.1,
+                "parmlabel": "Search radius",
+                "parmname": "radius",
+                "exportcontext": "cvex"
+            },
+            "type": "parameter"
+        },
+        "pcopen1": {
+            "parms": {},
+            "type": "pcopen"
+        },
+        "pcfilter1": {
+            "parms": {},
+            "type": "pcfilter"
+        }
+    },
+        "host": {
+        "host": "com"
+    }
+}
